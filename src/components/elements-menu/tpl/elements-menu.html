@@ -1,0 +1,48 @@
+<template id="elements_menu_template" data-component="elements-menu">
+	<div class="elements-menu" id="elements_menu">
+		<nav class="elements-menu__nav">
+			<ul class="elements-menu__list">
+				<li class="elements-menu__element elements-menu__element--purified-air" data-element="air">
+					<h2 class="elements-menu__title">purified<br />air</h2>
+					<span class="elements-menu__icon"></span>
+					{% include "element-page/tpl/purified-air.html" %}
+				</li>
+				<li class="elements-menu__element elements-menu__element--purified-water" data-element="water">
+					<h2 class="elements-menu__title">purified<br />water</h2>
+					<span class="elements-menu__icon"></span>
+					{% include "element-page/tpl/purified-water.html" %}
+				</li>
+				<li class="elements-menu__element elements-menu__element--circadian-lighting" data-element="light">
+					<h2 class="elements-menu__title">circadian<br />lighting</h2>
+					<span class="elements-menu__icon"></span>
+					{% include "element-page/tpl/circadian-lighting.html" %}
+				</li>
+				<li class="elements-menu__element elements-menu__element--blackout-blinds" data-element="blinds">
+					<h2 class="elements-menu__title">automated<br />blackout blinds</h2>
+					<span class="elements-menu__icon"></span>
+					{% include "element-page/tpl/automated-blackout-blinds.html" %}
+				</li>
+				<li class="elements-menu__element elements-menu__element--ambient-sound" data-element="sound">
+					<h2 class="elements-menu__title">biophilic<br />sounds</h2>
+					<span class="elements-menu__icon"></span>
+					{% include "element-page/tpl/biophilic-sounds.html" %}
+				</li>
+				<li class="elements-menu__element elements-menu__element--thermal-comfort" data-element="temperature">
+					<h2 class="elements-menu__title">temperature<br />control</h2>
+					<span class="elements-menu__icon"></span>
+					{% include "element-page/tpl/temperature-control.html" %}
+				</li>
+				<li class="elements-menu__element elements-menu__element--energising-mirror" data-element="mirror">
+					<h2 class="elements-menu__title">energising<br />mirror</h2>
+					<span class="elements-menu__icon"></span>
+					{% include "element-page/tpl/energising-mirror.html" %}
+				</li>
+				<li class="elements-menu__element elements-menu__element--wellness-mattress" data-element="mattress">
+					<h2 class="elements-menu__title">performance<br />mattress</h2>
+					<span class="elements-menu__icon"></span>
+					{% include "element-page/tpl/performance-mattress.html" %}
+				</li>
+			</ul>
+		</nav>
+	</div>
+</template>

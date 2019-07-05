@@ -1,0 +1,24 @@
+<template id="timeout_template">
+	<section id="timeout" class="timeout page">
+		<div class="timeout-container">
+
+			<div class="timeout__circle-container">
+				<svg xmlns="http://www.w3.org/2000/svg" class="timeout__countdown-circle">
+					<circle class="countdown__circle-underlay" stroke-width="0.67vw" fill="none" r="10vw" cy="50%" cx="50%"></circle>
+			    	<circle id="countdown_circle" stroke-width="0.67vw" fill="none" r="10vw" cy="50%" cx="50%"></circle>
+			    </svg>
+
+			    <div class="timeout__countdown-number-container">
+		    		<span class="timeout__countdown-number" id="countdown_number">60</span>
+		    		<span class="timeout__countdown-word">seconds</span>
+			    </div>
+		    </div>
+
+		    <div class="timeout__button-container">
+		    	<button class="timeout__button" id="timeout_startover">Startover</button>
+		    	<button class="timeout__button timeout__button--nature" id="timeout_continue">Continue</button>
+		    </div>
+
+		</div>
+	</section>
+</template>

@@ -1,0 +1,463 @@
+/** ====================================================================================================================
+ // Experience
+ // ================================================================================================================= */
+
+$experience-bg: '/img/experience/wake-bg.png';
+$experience-height-lo: -9.5vw;
+$experience-height-md: -22.5vw;
+$experience-height-hi: -27.5vw;
+$experience-font-size: 2.4vh;
+$experience-button-size: 8.3em;
+
+// EXPERIENCE PAGE
+.experience {
+    background: transparent;
+    background: {
+        size: 100% 100%;
+    };
+
+    &__inner {
+        height: inherit;
+        width: inherit;
+        opacity: 0;
+
+
+        transform: translateZ(0);
+        will-change: transform;
+        
+        transition: opacity 0.25s ease-in-out;
+    }
+
+    &.page--ready {
+
+        .experience__inner {
+            opacity: 1;
+        }
+    }
+}
+
+// EXPERIENCE MENU
+.experience-menu {
+    position: absolute;
+    width: 100%;
+    bottom: 4.1vw;
+    left: 0;
+    margin: 0;
+    padding: 0 4.5vw;
+    box-sizing: border-box;
+
+    transform: translateZ(0);
+    will-change: transform;
+        
+    transition: opacity 1s ease-in-out;
+
+    // UL: menu list
+    &__list {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+    }
+
+    // LI: menu items
+    &__item {
+        float: left;
+        display: block;
+        position: relative;
+        transform: translate3d(0, -4.7vw, 0);
+    }
+
+    // ANIMATION: raise menu up
+    &.menu-up {
+
+        .experience-menu {
+
+            &__item {
+
+                &.lo {
+                    @include ease-in-out-back(drop-lo, 1s, forwards);
+                    animation-direction: reverse;
+                }
+
+                &.md {
+                    @include ease-in-out-back(drop-md, 1s, forwards);
+                    animation-direction: reverse;
+                }
+
+                &.hi {
+                    @include ease-in-out-back(drop-hi, 1s, forwards);
+                    animation-direction: reverse;
+                }
+            }
+        }
+    }
+
+    // ANIMATION: drop menu down
+    &.menu-down {
+
+        .experience-menu {
+
+            &__item {
+
+                &.lo {
+                    @include ease-in-out-back(drop-lo, 1s, forwards);
+
+                }
+
+                &.md {
+                    @include ease-in-out-back(drop-md, 1s, forwards);
+                }
+
+                &.hi {
+                    @include ease-in-out-back(drop-hi, 1s, forwards);
+                }
+            }
+        }
+
+        .experience-slider {
+
+            &__bar {
+                transition-delay: 1s;
+            }
+        }
+    }
+
+    // PRE: styles before load
+    &.pre-init {
+        opacity: 0;
+
+        .experience-menu__item {
+            transform: translate3d(0, 15vw, 0) !important;
+        }
+
+        .experience-button {
+
+            &:after {
+                opacity: 0;
+            }
+        }
+    }
+
+    // MENU STATE: float - anchor to top
+    &.float {
+        opacity: 1;
+
+        .experience-menu {
+
+            &__item {
+
+                &.lo {
+                    transform: translate3d(0, $experience-height-lo, 0);
+                }
+
+                &.md {
+                    transform: translate3d(0, $experience-height-md, 0);
+                }
+
+                &.hi {
+                    transform: translate3d(0, $experience-height-hi, 0);
+                }
+            }
+        }
+    }
+
+    // MENU STATE: docked - anchor to bottom
+    &.docked {
+
+        .experience-menu__item {
+
+            &.lo {
+                transform: translate3d(0, 0, 0);
+            }
+
+            &.md {
+                transform: translate3d(0, 0, 0);
+            }
+
+            &.hi {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .experience-button {
+
+            &:before, &:after {
+
+                transform: translateZ(0);
+                will-change: transform;
+        
+                transition: 1.5s ease;
+                background: rgba($white, 0) !important;
+            }
+
+            &__inner {
+                transition-delay: 1s;
+
+                transform: translateZ(0);
+                will-change: transform;
+        
+                transition: 1.5s ease-in-out;
+                background: rgba($white, 0) !important;
+
+                .icon {
+
+                    transform: translateZ(0);
+                    will-change: transform;
+        
+                    transition: background 1.5s ease-in;
+
+                    &--wake { background-image: url('/img/experience/icons/wake-w.svg'); }
+                    &--energise { background-image: url('/img/experience/icons/energise-w.svg'); }
+                    &--daily-routine { background-image: url('/img/experience/icons/daily-routine-w.svg'); }
+                    &--wind-down { background-image: url('/img/experience/icons/wind-down-w.svg'); }
+                    &--sleep {background-image: url('/img/experience/icons/sleep-w.svg'); }
+                }
+            }
+
+            &__label {
+                transform: translate3d(0, -4.7vw, 0);
+            }
+        }
+    }
+    &.docked:not(.drop) {
+
+        .experience-button {
+
+            &__inner {
+
+                .icon {
+
+                    transform: translateZ(0);
+                    will-change: transform;
+        
+                    transition: background 0.5s ease;
+                }
+            }
+
+            &.active .icon {
+
+                &--wake { background-image: url('/img/experience/icons/wake-n.svg'); }
+                &--energise { background-image: url('/img/experience/icons/energise-n.svg'); }
+                &--daily-routine { background-image: url('/img/experience/icons/daily-routine-n.svg'); }
+                &--wind-down { background-image: url('/img/experience/icons/wind-down-n.svg'); }
+                &--sleep {background-image: url('/img/experience/icons/sleep-n.svg'); }
+            }
+        }
+
+        .experience-slider {
+            opacity: 1;
+        }
+    }
+}
+
+// EXPERIENCE BUTTON
+.experience-button {
+    color: $white;
+    font-size: $experience-font-size;
+    display: block;
+    width: $experience-button-size;
+    height: $experience-button-size;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+
+    // inner circle div
+    &__inner {
+        color: inherit;
+        background: $white;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        width: 46%;
+        height: 46%;
+        opacity: 50%;
+        z-index: 1;
+
+        transform: translateZ(0);
+        will-change: transform;
+        
+        transition: 0.5s ease-in-out;
+        @include set-position-mc();
+    }
+
+    // inner h1
+    &__label {
+        color: inherit;
+        font-weight: 500;
+        float: left;
+        margin: 0;
+        text-transform: uppercase;
+        position: relative;
+        letter-spacing: 0.150em;
+        font-size: 1em;
+        text-align: center;
+        width: 300%;
+
+        transform: translateZ(0);
+        will-change: transform;
+        
+        transition: transform 1s ease-in-out, color 0.5s ease-in-out;
+        @include set-position-bc(-100%, -4.5em);
+    }
+
+    // I: icon element
+    .icon {
+        display: block;
+        height: 60%;
+        width: 60%;
+
+        transform: translateZ(0);
+        will-change: transform;
+        
+        transition: background 0.5s ease;
+        background: transparent;
+        background: {
+            repeat: no-repeat;
+            size: 100%;
+        };
+        @include set-position-mc();
+
+        &--wake {
+            background-image: url('/img/experience/icons/wake.svg');
+            width: 54.58%;
+            height: 51.55%;
+        }
+
+        &--energise {
+            background-image: url('/img/experience/icons/energise.svg');
+            width: 56.1%;
+            height: 56.1%;
+        }
+
+        &--daily-routine {
+            background-image: url('/img/experience/icons/daily-routine.svg');
+            width: 48.53%;
+            height: 48.53%;
+        }
+
+        &--wind-down {
+            background-image: url('/img/experience/icons/wind-down.svg');
+            width: 50.04%;
+            height: 51%;
+        }
+
+        &--sleep {
+            background-image: url('/img/experience/icons/sleep.svg');
+            width: 45.48%;
+            height: 52%;
+        }
+    }
+
+    // outer radiating circle
+    &:before {
+        content: ' ';
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $white;
+        @include animation-radiate(2.5s, 0, infinite);
+    }
+
+    // inner radiating circle
+    &:after {
+        content: ' ';
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: $white;
+        @include animation-radiate(2.5s, 1.25s, infinite);
+        @include set-position-mc();
+    }
+
+    // STATES: :focus, :hover, .active
+    &.active {
+        outline: none;
+
+        &:before, &:after {
+            background: $nature;
+        }
+
+        .experience-button {
+
+            &__inner {
+                background: $nature;
+            }
+
+            &__label {
+                color: $nature;
+            }
+        }
+    }
+}
+
+// EXPERIENCE SLIDER
+.experience-slider {
+    width: 100%;
+    height: 0.7vw;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+
+    transform: translateZ(0);
+    will-change: transform;
+        
+    transition: 0.5s ease;
+    opacity: 0;
+
+    &__bar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: auto;
+        margin: auto;
+        display: block;
+        height: 100%;
+        width: 0;
+        background: $nature;
+        border-radius: 0.4vw;
+
+        transform: translateZ(0);
+        will-change: transform;
+        
+        transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+}
+
+// EXPERIENCE PAGE
+.experience-wave {
+    display: block;
+    width: 100%;
+    height: 75%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+//
+// ANIMATIONS
+@keyframes drop-lo {
+    0%   { transform: translate3d(0, $experience-height-lo, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes drop-md {
+    0%   { transform: translate3d(0, $experience-height-md, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes drop-hi {
+    0%   { transform: translate3d(0, $experience-height-hi, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}

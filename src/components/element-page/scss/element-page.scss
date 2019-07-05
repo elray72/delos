@@ -1,0 +1,923 @@
+.element-page {
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 6px;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+
+	transform: translateZ(0);
+	
+	will-change: transform;
+
+	transform: translate3d(0, 0, 0);
+
+	transition: transform 1s ease-in-out 0.85s,
+				width 1s ease-in-out 0.85s,
+				height 1s ease-in-out 0.85s;
+
+	// Resolution: Interactive Screen
+	@media only screen and (width: 1280px) and (height: 720px),
+		   only screen and (-webkit-min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+		   only screen and (min--moz-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+		   only screen and (-o-min-device-pixel-ratio: 3/1) and (width: 1280px) and (height: 720px),
+		   only screen and (min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+		   only screen and (min-resolution: 3dppx) and (width: 1280px) and (height: 720px) {
+
+		width: 170px;
+		height: 228px;
+   }
+
+   // Resolution: 1080p
+	@media (width: 1920px) and (height: 1080px) {
+		
+		width: 255px;
+		height: 343px
+	}
+
+	// Resolution: 1200p
+    @media (width: 2133px) and (height: 1200px) {
+
+		width: 283px;
+		height: 381px
+	}
+
+	// Resolution: 4K
+	@media (width: 3840px) and (height: 2160px) {
+		
+		width: 511px;
+		height: 687px
+	}
+
+}
+
+.element-page__content {
+	position: absolute;
+	z-index: 2;
+	width: 38vw;
+	height: 100vh;
+	background: $white;
+	opacity: 0;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+
+	transform: translateZ(0);
+	
+	will-change: transform;
+
+	transform-origin: top left;
+
+	transition: opacity 1s ease-in-out 0.85s,
+				transform 1s ease-in-out 0.85s;
+
+
+	// Resolution: Interactive Screen
+	@media only screen and (width: 1280px) and (height: 720px),
+		   only screen and (-webkit-min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+		   only screen and (min--moz-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+		   only screen and (-o-min-device-pixel-ratio: 3/1) and (width: 1280px) and (height: 720px),
+		   only screen and (min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+		   only screen and (min-resolution: 3dppx) and (width: 1280px) and (height: 720px) {
+
+		width: 486px;
+		height: 720px;
+
+		.element-page--biophilic-sounds & { transform: translate3d(-226px, -22px, 0.0002px) scale(0.36146); }
+		.element-page--blackout-blinds & { transform: translate3d(-346px, -75px, 0.0002px) scale(0.57556); }
+		.element-page--circadian-lighting & { transform: translate3d(-208px, 0px, 0.0002px) scale(0.31738); }
+		.element-page--energising-mirror & { transform: translate3d(-243px, -6px, 0.0002px) scale(0.32997); }
+		.element-page--purified-air & { transform: translate3d(-219px, -5px, 0.0002px) scale(0.325); }
+		.element-page--purified-water & { transform: translate3d(-238px, -4px, 0.0002px) scale(0.32241); }
+		.element-page--temperature-control & { transform: translate3d(-240px, -20px, 0.0002px) scale(0.36272); }
+		.element-page--performance-mattress & { transform: translate3d(-174px, -3px, 0.0002px) scale(0.32745); }
+
+	}
+
+	// Resolution: 1080p
+	@media (width: 1920px) and (height: 1080px) {
+
+		width: 730px;
+		height: 1080px;
+
+		.element-page--biophilic-sounds & { transform: translate3d(-339px, -44px, 0.0002px) scale(0.36146); }
+		.element-page--blackout-blinds & { transform: translate3d(-519px, -112px, 0.0002px) scale(0.57556); }
+		.element-page--circadian-lighting & { transform: translate3d(-317px, 0px, 0.0002px) scale(0.31738); }
+		.element-page--energising-mirror & { transform: translate3d(-314px, -9px, 0.0002px) scale(0.32997); }
+		.element-page--purified-air & { transform: translate3d(-328px, -7px, 0.0002px) scale(0.325); }
+		.element-page--purified-water & { transform: translate3d(-357px, -6px, 0.0002px) scale(0.32241); }
+		.element-page--temperature-control & { transform: translate3d(-360px, -30px, 0.0002px) scale(0.36272); }
+		.element-page--performance-mattress & { transform: translate3d(-261px, -4px, 0.0002px) scale(0.32745); }
+
+	}
+
+	// Resolution: 1200p
+    @media (width: 2133px) and (height: 1200px) {
+
+		width: 811px;
+		height: 1200px;
+
+		.element-page--biophilic-sounds & { transform: translate3d(-377px, -49px, 0.0002px) scale(0.36146); }
+		.element-page--blackout-blinds & { transform: translate3d(-576px, -124px, 0.0002px) scale(0.57556); }
+		.element-page--circadian-lighting & { transform: translate3d(-352px, 0px, 0.0002px) scale(0.31738); }
+		.element-page--energising-mirror & { transform: translate3d(-349px, -10px, 0.0002px) scale(0.32997); }
+		.element-page--purified-air & { transform: translate3d(-364px, -8px, 0.0002px) scale(0.325); }
+		.element-page--purified-water & { transform: translate3d(-397px, -7px, 0.0002px) scale(0.32241); }
+		.element-page--temperature-control & { transform: translate3d(-400px, -33px, 0.0002px) scale(0.36272); }
+		.element-page--performance-mattress & { transform: translate3d(-290px, -4px, 0.0002px) scale(0.32745); }
+
+	}
+
+	// Resolution: 4K
+	@media (width: 3840px) and (height: 2160px) {
+
+		width: 1459px;
+		height: 2160px;
+
+		.element-page--biophilic-sounds & { transform: translate3d(-678px, -66px, 0.0002px) scale(0.36146); }
+		.element-page--blackout-blinds & { transform: translate3d(-1038px, -225px, 0.0002px) scale(0.57556); }
+		.element-page--circadian-lighting & { transform: translate3d(-624px, 0px, 0.0002px) scale(0.31738); }
+		.element-page--energising-mirror & { transform: translate3d(-729px, -18px, 0.0002px) scale(0.32997); }
+		.element-page--purified-air & { transform: translate3d(-657px, -15px, 0.0002px) scale(0.325); }
+		.element-page--purified-water & { transform: translate3d(-714px, -12px, 0.0002px) scale(0.32241); }
+		.element-page--temperature-control & { transform: translate3d(-720px, -60px, 0.0002px) scale(0.36272); }
+		.element-page--performance-mattress & { transform: translate3d(-522px, -9px, 0.0002px) scale(0.32745); }
+		
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 13.8vh;
+		left: 5.5vw;
+		background-color: $water;
+		width: 1px;
+		height: 1px;
+		transform-origin: 0 0;
+		opacity: 0;
+
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		backface-visibility: hidden;
+
+		-webkit-perspective: 1000;
+		-moz-perspective: 1000;
+		-ms-perspective: 1000;
+		perspective: 1000;
+
+		transform: translateZ(0);
+		
+		will-change: transform;
+
+		transform: scaleY(1);
+
+		transition: opacity 0.8s ease 0s, transform 0s ease 1.9s;
+	}
+}
+
+.element-page__background-image-container {
+	background-color: black;
+	position: absolute;
+	z-index: 1;
+	width: 62vw;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+
+	transform: translateZ(0);
+	
+	will-change: transform;
+
+	transform-origin: top left;
+
+	transition: transform 1s ease-in-out 0.85s;
+
+
+	// Resolution: Interactive Screen
+	@media only screen and (width: 1280px) and (height: 720px),
+		   only screen and (-webkit-min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+		   only screen and (min--moz-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+		   only screen and (-o-min-device-pixel-ratio: 3/1) and (width: 1280px) and (height: 720px),
+		   only screen and (min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+		   only screen and (min-resolution: 3dppx) and (width: 1280px) and (height: 720px) {
+
+		width: 794px;
+
+		.element-page--biophilic-sounds & { transform: translate3d(-50px, -22px, 0.0001px) scale(0.36146); }
+		.element-page--blackout-blinds & { transform: translate3d(-66px, -75px, 0.0001px) scale(0.57556); }
+		.element-page--circadian-lighting & { transform: translate3d(-54px, 0px, 0.0001px) scale(0.31738); }
+		.element-page--energising-mirror & { transform: translate3d(-83px, -6px, 0.0001px) scale(0.32997); }
+		.element-page--purified-air & { transform: translate3d(-61px, -5px, 0.0001px) scale(0.325); }
+		.element-page--purified-water & { transform: translate3d(-81px, -4px, 0.0001px) scale(0.32241); }
+		.element-page--temperature-control & { transform: translate3d(-64px, -20px, 0.0001px) scale(0.36272); }
+		.element-page--performance-mattress & { transform: translate3d(-15px, -3px, 0.0001px) scale(0.32745); }
+
+	}
+
+	// Resolution: 1080p
+	@media (width: 1920px) and (height: 1080px) {
+
+		width: 1190px;
+
+		.element-page--biophilic-sounds & { transform: translate3d(-75px, -33px, 0.0001px) scale(0.36146); }
+		.element-page--blackout-blinds & { transform: translate3d(-99px, -112px, 0.0001px) scale(0.57556); }
+		.element-page--circadian-lighting & { transform: translate3d(-81px, 0px, 0.0001px) scale(0.31738); }
+		.element-page--energising-mirror & { transform: translate3d(-124px, -9px, 0.0001px) scale(0.32997); }
+		.element-page--purified-air & { transform: translate3d(-92px, -7px, 0.0001px) scale(0.325); }
+		.element-page--purified-water & { transform: translate3d(-121px, -6px, 0.0001px) scale(0.32241); }
+		.element-page--temperature-control & { transform: translate3d(-96px, -30px, 0.0001px) scale(0.36272); }
+		.element-page--performance-mattress & { transform: translate3d(-22px, -4px, 0.0001px) scale(0.32745); }
+
+	}
+
+    // Resolution: 1200p
+    @media (width: 2133px) and (height: 1200px) {
+
+        width: 1322px;
+
+        .element-page--biophilic-sounds & { transform: translate3d(-75px, -37px, 0.0001px) scale(0.36146); }
+        .element-page--blackout-blinds & { transform: translate3d(-99px, -136px, 0.0001px) scale(0.57556); }
+        .element-page--circadian-lighting & { transform: translate3d(-81px, 0px, 0.0001px) scale(0.31738); }
+        .element-page--energising-mirror & { transform: translate3d(-124px, -10px, 0.0001px) scale(0.32997); }
+        .element-page--purified-air & { transform: translate3d(-92px, -8px, 0.0001px) scale(0.325); }
+        .element-page--purified-water & { transform: translate3d(-121px, -7px, 0.0001px) scale(0.32241); }
+        .element-page--temperature-control & { transform: translate3d(-96px, -33px, 0.0001px) scale(0.36272); }
+        .element-page--performance-mattress & { transform: translate3d(-22px, -4px, 0.0001px) scale(0.32745); }
+
+    }
+
+	// Resolution: 4K
+	@media (width: 3840px) and (height: 2160px) {
+
+		width: 2381px;
+
+		.element-page--biophilic-sounds & { transform: translate3d(-150px, -66px, 0.0001px) scale(0.36146); }
+		.element-page--blackout-blinds & { transform: translate3d(-198px, -225px, 0.0001px) scale(0.57556); }
+		.element-page--circadian-lighting & { transform: translate3d(-162px, 0px, 0.0001px) scale(0.31738); }
+		.element-page--energising-mirror & { transform: translate3d(-249px, -18px, 0.0001px) scale(0.32997); }
+		.element-page--purified-air & { transform: translate3d(-183px, -15px, 0.0001px) scale(0.325); }
+		.element-page--purified-water & { transform: translate3d(-243px, -12px, 0.0001px) scale(0.32241); }
+		.element-page--temperature-control & { transform: translate3d(-192px, -60px, 0.0001px) scale(0.36272); }
+		.element-page--performance-mattress & { transform: translate3d(-45px, -9px, 0.0001px) scale(0.32745); }
+		
+	}
+}
+
+.element-page__background-image {
+	width: 100%;
+	float: left;
+	opacity: 0.5;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+
+	transform: translateZ(0);
+	
+	will-change: transform;
+
+	transition: opacity 1s ease-in-out 0.85s;
+}
+
+.element-page__background-video {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+
+	video {
+		display: block;
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+
+		&.fade-out {
+			transition: opacity 1.8s ease-out;
+			opacity: 0;
+		}
+	}
+
+	&.active {
+		display: block;
+	}
+}
+
+.element-page__close {
+	position: absolute;
+	z-index: 3;
+	top: 5.8vh;
+	right: 4.7vw;
+	width: 4.62962vh;
+	height: 4.62962vh;
+	padding: 0;
+	
+	background-image: url('/img/element-page/icons/close-button.svg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+	border-radius: 100px;
+	font-size: 1px;
+	color: $white;
+	line-height: 0;
+	text-indent: -99999px;
+	opacity: 0;
+	border: 0px;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+
+	transform: translateZ(0);
+	
+	will-change: transform;
+
+	transform: translate3d(5000px, 0, 0.0003px);
+
+	transition: opacity 0.8s ease 0s,
+				transform 0s ease 0.85s;
+}
+
+.element-page__content-positioner {
+	position: absolute;
+	top: 19.4vh;
+	left: 5.5vw;
+	overflow: hidden;
+}
+
+.element-page__title {
+	width: 28vw;
+	font-size: 4.62vh;
+	font-weight: 600;
+	line-height: 1.2;
+	letter-spacing: 0.36vw;
+	text-transform: uppercase;
+	color: $water;
+	margin: 0;
+	padding: 0 0 2.4vh 1.8vw;
+	opacity: 0;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+
+	transform: translateZ(0);
+	
+	will-change: transform;
+
+	transform: translate3d(-100px, 0, 0);
+
+	transition: opacity 0.8s ease 0s, transform 0s ease 1.8s;
+}
+
+.element-page__lead {
+	width: 23.9vw;
+	font-size: 1.48vh;
+	font-weight: 400;
+	line-height: 1.56;
+	letter-spacing: 0.05vw;
+	margin: 0;
+	padding: 0 0 3.8vh 1.8vw;
+	opacity: 0;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+
+	transform: translateZ(0);
+	
+	will-change: transform;
+
+	transform: translate3d(-100px, 0, 0);
+
+	transition: opacity 0.8s ease 0s, transform 0s ease 1.8s;
+}
+
+.element-page__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.element-page__list-item {
+	font-size: 1.94vh;
+	font-weight: 600;
+	line-height: 1.43;
+	letter-spacing: 0.07vw;
+	text-transform: uppercase;
+	color: $water;
+	margin: 0;
+	padding: 0 0 2vh 0;
+	opacity: 0;
+	max-width: 28vw;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+
+	transform: translateZ(0);
+	
+	will-change: transform;
+
+	transform: translate3d(-100px, 0, 0);
+
+	transition: opacity 0.8s ease 0s, transform 0s ease 1.8s;
+
+	&:before {
+		content: '';
+		display: block;
+		width: 2.3vw;
+		height: 1px;
+		background-color: $water; 
+		margin: 1.15vh 1vw 3vh 0;
+		float: left;
+	}
+}
+
+.element-page__product-icon {
+	position: absolute;
+	opacity: 0;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+
+	transform: translateZ(0);
+	
+	will-change: transform;
+
+	transform: translate3d(-100px, 0, 0);
+
+	transition: opacity 0.8s ease 0s, transform 0s ease 1.8s;
+
+	.element-page--biophilic-sounds & { top: 5.5vh; left: 3vw; width: 5vw; }
+	.element-page--blackout-blinds & { top: 6.7vh; left: 3.75vw; width: 3.5vw; }
+	.element-page--circadian-lighting & { top: 5.8vh; left: 2.9vw; width: 5.3vw; }
+	.element-page--energising-mirror & { top: 6.6vh; left: 3.65vw; width: 3.8vw; }
+	.element-page--purified-air & { top: 6.45vh; left: 3.45vw; width: 4vw; }
+	.element-page--purified-water & { top: 5.5vh; left: 3.33vw; width: 4.4vw; }
+	.element-page--temperature-control & { top: 6.5vh; left: 3.5vw; width: 4.01vw; }
+	.element-page--performance-mattress & { top: 6.7vh; left: 3.7vw; width: 3.7vw; }
+}
+
+.element-page__product-image {
+	position: absolute;
+	bottom: 0;
+	opacity: 0;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+
+	transform: translateZ(0);
+	
+	will-change: transform;
+
+	transform: translate3d(-100px, 0, 0);
+	
+	transition: opacity 0.8s ease 0s, transform 0s ease 1.8s;
+
+	.element-page--biophilic-sounds & { left: 29.4vw; width: 14.5vw; }
+	.element-page--blackout-blinds & { left: 28.5vw; width: 14.3vw; }
+	.element-page--circadian-lighting & { left: 32.2vw; width: 9vw; }
+	.element-page--energising-mirror & { left: 34.8vw; width: 6vw; }
+	.element-page--purified-air & { left: 27.1vw; width: 16vw; }
+	.element-page--purified-water & { left: 33.6vw; width: 8.85vw; }
+	.element-page--temperature-control & { left: 30.3vw; width: 15.7vw; }
+	.element-page--performance-mattress & { left: 24vw; width: 20vw; }
+}
+
+
+
+
+/* OPEN STYLE */
+
+.open {
+
+	.element-page {
+		z-index: 200;
+		border-radius: 0px;
+
+		transition: transform 1s ease-in-out,
+					width 1s ease-in-out,
+					height 1s ease-in-out;
+
+
+		// Resolution: VW & VH Fallback
+		&.element-page--biophilic-sounds { 
+			transform: translate3d(-22.49vw, -50.46vh, 0)
+		}
+ 
+		&.element-page--blackout-blinds {
+			transform: translate3d(-64.18vw, -17.58vh, 0)
+		}
+ 
+		&.element-page--circadian-lighting {
+			transform: translate3d(-50.3vw, -17.58vh, 0);;
+		}
+ 
+		&.element-page--energising-mirror {
+			transform: translate3d(-50.3vw, -50.46vh, 0);;
+		}
+ 
+		&.element-page--purified-air {
+			transform: translate3d(-22.49vw, -17.58vh, 0)
+		}
+ 
+		&.element-page--purified-water {
+			transform: translate3d(-36.4vw, -17.58vh, 0);
+		}
+ 
+		&.element-page--temperature-control {
+			transform: translate3d(-36.4vw, -50.46vh, 0);;
+		}
+ 
+		&.element-page--performance-mattress {
+			transform: translate3d(-64.18vw, -50.46vh, 0);
+		}
+
+
+		
+
+
+		// Resolution: Interactive Screen
+		@media only screen and (width: 1280px) and (height: 720px),
+			   only screen and (-webkit-min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			   only screen and (min--moz-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			   only screen and (-o-min-device-pixel-ratio: 3/1) and (width: 1280px) and (height: 720px),
+			   only screen and (min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			   only screen and (min-resolution: 3dppx) and (width: 1280px) and (height: 720px) {
+
+			width: 1280px;
+			height: 720px;
+
+			&.element-page--biophilic-sounds { 
+				transform: translate3d(-288px, -363px, 0);
+			}
+
+			&.element-page--blackout-blinds { 
+				transform: translate3d(-822px, -127px, 0);
+			}
+
+			&.element-page--circadian-lighting { 
+				transform: translate3d(-644px, -127px, 0);
+			}
+
+			&.element-page--energising-mirror { 
+				transform: translate3d(-644px, -363px, 0);
+			}
+
+			&.element-page--purified-air { 
+				transform: translate3d(-288px, -127px, 0);
+			}
+
+			&.element-page--purified-water { 
+				transform: translate3d(-466px, -127px, 0);
+			}
+
+			&.element-page--temperature-control { 
+				transform: translate3d(-466px, -363px, 0);
+			}
+
+			&.element-page--performance-mattress { 
+				transform: translate3d(-822px, -363px, 0);
+			}
+		}
+
+		
+
+
+		// Resolution: 1080p
+		@media (width: 1920px) and (height: 1080px) {
+
+			width: 1920px;
+			height: 1080px;
+
+			&.element-page--biophilic-sounds { 
+				transform: translate3d(-432px, -545px, 0);
+			}
+
+			&.element-page--blackout-blinds { 
+				transform: translate3d(-1233px, -190px, 0)
+			}
+
+			&.element-page--circadian-lighting { 
+				transform: translate3d(-966px, -190px, 0);
+			}
+
+			&.element-page--energising-mirror { 
+				transform: translate3d(-966px, -545px, 0);
+			}
+
+			&.element-page--purified-air { 
+				transform: translate3d(-432px, -190px, 0);
+			}
+
+			&.element-page--purified-water { 
+				transform: translate3d(-699px, -190px, 0);
+			}
+
+			&.element-page--temperature-control { 
+				transform: translate3d(-699px, -545px, 0);;
+			}
+
+			&.element-page--performance-mattress { 
+				transform: translate3d(-1233px, -545px, 0);
+			}
+		}
+
+
+        // Resolution: 1200p
+        @media (min-width: 2133px) and (height: 1200px) {
+
+            width: 2133px;
+            height: 1200px;
+
+            &.element-page--biophilic-sounds {
+                transform: translate3d(-480px, -606px, 0);
+            }
+
+            &.element-page--blackout-blinds {
+                transform: translate3d(-1370px, -211px, 0)
+            }
+
+            &.element-page--circadian-lighting {
+                transform: translate3d(-1073px, -211px, 0);
+            }
+
+            &.element-page--energising-mirror {
+                transform: translate3d(-1073px, -606px, 0);
+            }
+
+            &.element-page--purified-air {
+                transform: translate3d(-480px, -211px, 0);
+            }
+
+            &.element-page--purified-water {
+                transform: translate3d(-777px, -211px, 0);
+            }
+
+            &.element-page--temperature-control {
+                transform: translate3d(-777px, -606px, 0);;
+            }
+
+            &.element-page--performance-mattress {
+                transform: translate3d(-1370px, -606px, 0);
+            }
+        }
+
+
+		// Resolution: 4K
+		@media (width: 3840px) and (height: 2160px) {
+
+			width: 3840px;
+			height: 2160px;
+			
+			&.element-page--biophilic-sounds { 
+				transform: translate3d(-864px, -1090px, 0);
+			}
+
+			&.element-page--blackout-blinds { 
+				transform: translate3d(-2466px, -380px, 0);
+			}
+
+			&.element-page--circadian-lighting { 
+				transform: translate3d(-1932px, -380px, 0);
+			}
+
+			&.element-page--energising-mirror { 
+				transform: translate3d(-1932px, -1090px, 0);
+			}
+
+			&.element-page--purified-air { 
+				transform: translate3d(-864px, -380px, 0);
+			}
+
+			&.element-page--purified-water { 
+				transform: translate3d(-1398px, -380px, 0);
+			}
+
+			&.element-page--temperature-control { 
+				transform: translate3d(-1398px, -1090px, 0);
+			}
+
+			&.element-page--performance-mattress { 
+				transform: translate3d(-2466px, -1090px, 0);
+			}
+
+		}
+	}
+
+	.element-page__content {
+		opacity: 1;
+		transform: translate3d(0px, 0px, 0.0002px) scale(1);
+
+		transition: opacity 1s ease-in-out,
+					transform 1s ease-in-out;
+
+		&:after {
+			content: '';
+			opacity: 1;
+
+			transform: scaleY(10000);
+
+			transition: opacity 0s ease-in-out 0s,
+						transform 0.9s ease-in-out 1.25s;
+
+			// Resolution: Interactive Screen
+			@media only screen and (width: 1280px) and (height: 720px),
+				   only screen and (-webkit-min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+				   only screen and (min--moz-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+				   only screen and (-o-min-device-pixel-ratio: 3/1) and (width: 1280px) and (height: 720px),
+				   only screen and (min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+				   only screen and (min-resolution: 3dppx) and (width: 1280px) and (height: 720px) {
+
+				transform: scaleY(621);
+
+			}
+
+			// Resolution: 1080p
+			@media (width: 1920px) and (height: 1080px) {
+
+				transform: scaleY(931);
+
+			}
+
+            // Resolution: 1200p
+            @media (width: 2133px) and (height: 1200px) {
+
+                transform: scaleY(1034);
+
+            }
+
+			// Resolution: 4K
+			@media (width: 3840px) and (height: 2160px) {
+
+				transform: scaleY(1863);
+				
+			}
+		}
+	}
+
+	.element-page__background-image-container {
+		transform: translate3d(37.96875vw, 0, 0.0001px) scale(1);
+		transition: transform 1s ease-in-out;
+
+
+		// Resolution: Interactive Screen
+		@media only screen and (width: 1280px) and (height: 720px),
+			   only screen and (-webkit-min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			   only screen and (min--moz-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			   only screen and (-o-min-device-pixel-ratio: 3/1) and (width: 1280px) and (height: 720px),
+			   only screen and (min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			   only screen and (min-resolution: 3dppx) and (width: 1280px) and (height: 720px) {
+
+			transform: translate3d(486px, 0, 0.0001px) scale(1);
+
+		}
+
+		// Resolution: 1080p
+		@media (width: 1920px) and (height: 1080px) {
+
+			transform: translate3d(729px, 0, 0.0001px) scale(1);
+
+		}
+
+        // Resolution: 1200p
+        @media (width: 2133px) and (height: 1200px) {
+
+            transform: translate3d(810px, 0, 0.0001px) scale(1);
+
+        }
+
+		// Resolution: 4K
+		@media (width: 3840px) and (height: 2160px) {
+
+			transform: translate3d(1458px, 0, 0.0001px) scale(1);
+			
+		}
+	}
+
+	.element-page__background-image {
+		opacity: 1;
+
+		transition: opacity 1s ease;
+	}
+
+	.element-page__close {
+		opacity: 1;
+		transform: translate3d(0, 0, 0.0003px);
+
+		transition: opacity 0.8s ease 1.35s,
+					transform 0s ease 0s;
+	}
+
+	.element-page__title {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+
+		transition: opacity 0.8s ease 1.35s,
+					transform 0.8s ease 1.35s;
+	}
+
+	.element-page__lead {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+
+		transition: opacity 0.8s ease 1.4s,
+					transform 0.8s ease 1.4s;
+	}
+
+	.element-page__list-item {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+
+		transition: opacity 0.8s ease 1.45s,
+					transform 0.8s ease 1.45s;
+	}
+
+	.element-page__product-icon {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+
+		transition: opacity 0.8s ease 1.35s,
+					transform 0.8s ease 1.35s;
+	}
+
+	.element-page__product-image {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+
+		transition: opacity 0.65s ease 1.35s,
+					transform 0.65s ease 1.35s;
+	}
+
+}

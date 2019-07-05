@@ -1,0 +1,30 @@
+{% set menuItems = [
+    { id: 'wake',          label: 'Wake',          modifier: 'wake',          position: 'lo' },
+    { id: 'energise',      label: 'Energise',      modifier: 'energise',      position: 'md' },
+    { id: 'daily_routine', label: 'Daily routine', modifier: 'daily-routine', position: 'hi' },
+    { id: 'wind_down',     label: 'Wind down',     modifier: 'wind-down',     position: 'md' },
+    { id: 'sleep',         label: 'Sleep',         modifier: 'sleep',         position: 'lo' }
+]%}
+<section id="experience" class="experience page" data-component="experience">
+    <div class="experience__inner">
+        <canvas class="experience-wave" id="experience_wave" height="810" width="1920"></canvas>
+        <nav class="experience-menu pre-init" id="experience_menu">
+            <ul class="experience-menu__list">
+                {% for m in menuItems %}
+                <li class="experience-menu__item {{ m.position }}">
+                    <a class="experience-button" href="#{{ m.id }}" id="menu_item_{{ m.id }}" data-video-id="{{ m.id }}">
+                        <div class="experience-button__inner">
+                            <i class="icon icon--{{ m.modifier }}"></i>
+                            <h1 class="experience-button__label">{{ m.label }}</h1>
+                        </div>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="experience-slider pre-init" id="experience_slider">
+                <span class="experience-slider__bar" id="experience_slider_bar"></span>
+            </div>
+        </nav>
+
+    </div>
+</section>

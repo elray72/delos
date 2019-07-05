@@ -1,0 +1,61 @@
+// =====================================================================================================================
+// Developer
+// =====================================================================================================================
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+// Local Variables
+$opacity: 0.4;
+
+.dev {
+
+    &:after {
+        color: $white;
+        display: inline-block;
+        padding: 15px 20px;
+        content: 'Default: #{map-get($grid-breakpoints, default)} to #{map-get($grid-breakpoints, mobile) - 1}';
+        background: rgba($yellow, $opacity);
+        border-top-left-radius: 5px;
+        @include set-position-br();
+        @include ease-in-out();
+        position: fixed;
+        z-index: 10;
+
+        @include media-breakpoint-up(mobile) {
+            content: 'Mobile: #{map-get($grid-breakpoints, mobile)}';
+            background: rgba($red, $opacity);
+        }
+
+        @include media-breakpoint-up(tablet) {
+            content: 'Tablet: #{map-get($grid-breakpoints, tablet)}';
+            background: rgba($purple, $opacity);
+        }
+
+        @include media-breakpoint-up(laptop) {
+            content: 'Laptop: #{map-get($grid-breakpoints, laptop)}';
+            background: rgba($blue, $opacity);
+        }
+
+        @include media-breakpoint-up(wide) {
+            content: 'Wide: #{map-get($grid-breakpoints, wide)}';
+            background: rgba($green, $opacity);
+        }
+    }
+
+    &__msg {
+        color: $white;
+        display: none;
+        padding: 15px 20px;
+        content: 'Default: #{map-get($grid-breakpoints, default)} to #{map-get($grid-breakpoints, mobile) - 1}';
+        background: rgba($pink, $opacity);
+        border-top-right-radius: 5px;
+        @include set-position-bl();
+        @include ease-in-out();
+        position: fixed;
+        z-index: 10;
+
+        &--show {
+            display: inline-block;
+        }
+    }
+}

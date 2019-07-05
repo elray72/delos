@@ -1,0 +1,37 @@
+/** ====================================================================================================================
+// Layout
+// ================================================================================================================== */
+
+
+// Base
+// ---------------------------------------------------------------------------------------------------------------------
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font: normal 16px $font-graphik;
+    background: black;
+    overflow: hidden;
+}
+
+.page {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+
+    &--show {
+        z-index: 2;
+    }
+}
+
+* {
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-appearance: none;
+}

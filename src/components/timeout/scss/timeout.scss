@@ -1,0 +1,275 @@
+.timeout {
+	position: absolute;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 1;
+
+	animation: showTimeout 0.5s ease;
+
+	&.exit {
+		animation: hideTimeout 0.5s ease;
+	}
+}
+
+@keyframes showTimeout {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes hideTimeout {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+
+
+.timeout-container {
+	position: absolute;
+	top: 18.3vh;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto auto auto;
+	padding: 6.3vh;
+	box-sizing: border-box;
+	text-align: center;
+	width: 45.2vw;
+	height: 62.8vh;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 5.23vw;
+		height: 5.23vw;
+	}
+
+	&:before {
+		content: '';
+		top: 0;
+		right: 0;
+		border-top: 1px solid $white;
+		border-right: 1px solid $white;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		border-bottom: 1px solid $white;
+		border-left: 1px solid $white;
+	}
+}
+
+.timeout__circle-container {
+	position: relative;
+	margin-bottom: 6.3vh;
+}
+
+.timeout__countdown-circle {
+	width: 20.9vw;
+	height: 20.9vw;
+	stroke: $nature;
+	transform: rotate(-90deg);
+
+	.countdown__circle-underlay {
+		stroke: rgba(255, 255, 255, 0.15);
+	}
+
+	#countdown_circle {
+		stroke-dashoffset: 0;
+
+		// Resolution: Interactive Screen
+		@media only screen and (-webkit-min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			   only screen and (min--moz-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			   only screen and (-o-min-device-pixel-ratio: 3/1) and (width: 1280px) and (height: 720px),
+			   only screen and (min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			   only screen and (min-resolution: 3dppx) and (width: 1280px) and (height: 720px) {
+
+		    stroke-dasharray: 804; /* this value is the pixel circumference of the circle */
+
+		}
+
+		// Resolution: 1080p
+		@media (width: 1920px) and (height: 1080px) {
+
+		    stroke-dasharray: 1206; /* this value is the pixel circumference of the circle */
+
+		}
+
+        // Resolution: 1200p
+        @media (width: 2133px) and (height: 1200px) {
+
+            stroke-dasharray: 1340; /* this value is the pixel circumference of the circle */
+
+        }
+
+		// Resolution: 4K
+		@media (width: 3840px) and (height: 2160px) {
+
+		    stroke-dasharray: 2412; /* this value is the pixel circumference of the circle */
+
+		}
+		
+		&.animate {
+			animation: drawCircle 60s linear;
+		}
+	}
+}
+
+// Resolution: Interactive Screen
+@media only screen and (-webkit-min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+	   only screen and (min--moz-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+	   only screen and (-o-min-device-pixel-ratio: 3/1) and (width: 1280px) and (height: 720px),
+	   only screen and (min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+	   only screen and (min-resolution: 3dppx) and (width: 1280px) and (height: 720px) {
+
+    @keyframes drawCircle {
+		from {
+			stroke-dashoffset: 0;
+		}
+		to {
+			stroke-dashoffset: -804;
+		}
+	}
+
+}
+
+// Resolution: 1080p
+@media (width: 1920px) and (height: 1080px) {
+
+    @keyframes drawCircle {
+		from {
+			stroke-dashoffset: 0;
+		}
+		to {
+			stroke-dashoffset: -1206;
+		}
+	}
+
+}
+
+// Resolution: 1200p
+@media (width: 2133px) and (height: 1200px) {
+
+    @keyframes drawCircle {
+        from {
+            stroke-dashoffset: 0;
+        }
+        to {
+            stroke-dashoffset: -1340;
+        }
+    }
+
+}
+
+// Resolution: 4K
+@media (width: 3840px) and (height: 2160px) {
+
+    @keyframes drawCircle {
+		from {
+			stroke-dashoffset: 0;
+		}
+		to {
+			stroke-dashoffset: -2412;
+		}
+	}
+
+}
+
+.timeout__countdown-number-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 7vw;
+	height: 7vw;
+}
+
+.timeout__countdown-number {
+	color: $white;
+	font-size: 9.25vh;
+	line-height: 1;
+	font-weight: 200;
+	float: left;
+	text-align: center;
+	width: 100%;
+	display: block;
+    letter-spacing: 0.24vw;
+}
+
+.timeout__countdown-word {
+	color: $white;
+	font-size: 2.31vh;
+	float: left;
+	text-align: center;
+	width: 100%;
+	display: block;
+    font-weight: 600;
+    letter-spacing: 0.24vw;
+}
+
+.timeout__button {
+	position: relative;
+	display: inline-block;
+	background: none;
+	border: 1px solid $white;
+	color: $white;
+	font-weight: 200;
+	font-size: 1.85vh;
+	line-height: 1;
+	text-transform: uppercase;
+	border-radius: 100px;
+	padding: 1.48vh 1.2vw 1.3vh 3.17vw;
+	margin-right: 1.6vw;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 1.3vh;
+		left: 1.27vw;
+		width: 1.01vw;
+		height: 1.94vh;
+		background-image: url('/img/timeout/icons/startover.svg');
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+
+	&.timeout__button--nature {
+		color: $black;
+		background-color: $nature;
+		border-color: $nature;
+		font-weight: 400;
+		margin-right: 0px;
+		padding-left: 3.51vw;
+
+		&:before {
+			content: '';
+			top: 1.1vh;
+			left: 1.6vw;
+			width: 1.22vw;
+			height: 2.64vh;
+			background-image: url('/img/timeout/icons/continue.svg');
+		}
+	}
+}
+
+
+
+
+

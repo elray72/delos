@@ -1,0 +1,124 @@
+{
+  "videos": [
+    {
+      "id": "home",
+      "src": "/media/00-home.mp4",
+      "poster": "/media/posters/00-home-0.png",
+      "loop": true,
+      "transitionIn": "fade-in",
+      "transitionOut": "fade-out",
+      "category": "menu",
+      "onVideoPlaying": "",
+      "onVideoPaused": "",
+      "onVideoEnded": ""
+    },
+    {
+      "id": "intro",
+      "src": "/media/00-intro.mp4",
+      "poster": "/media/posters/00-black.png",
+      "loop": false,
+      "transitionIn": "fade-in",
+      "transitionOut": "fade-out",
+      "category": "intro",
+      "onVideoPlaying": "",
+      "onVideoPaused": "",
+      "onVideoEnded": "page:show experience"
+    },
+    {
+      "id": "menu_in",
+      "src": "/media/00-menu-in.mp4",
+      "poster": "/media/posters/00-black.png",
+      "loop": false,
+      "transitionIn": "fade-in",
+      "transitionOut": "seamless",
+      "category": "menu",
+      "onVideoPlaying": "",
+      "onVideoPaused": "",
+      "onVideoEnded": "video:play menu_loop"
+    },
+    {
+      "id": "menu_loop",
+      "src": "/media/00-menu-loop.mp4",
+      "poster": "/media/posters/00-menu-loop-0.png",
+      "loop": true,
+      "transitionIn": "seamless",
+      "transitionOut": "fade-out",
+      "category": "menu",
+      "onVideoPlaying": "",
+      "onVideoPaused": "",
+      "onVideoEnded": ""
+    },
+    {
+      "id": "wake",
+      "src": "/media/01-wake-up.mp4",
+      "poster": "/media/posters/01-wake-up-0.png",
+      "loop": false,
+      "transitionIn": "fade-in",
+      "transitionOut": "fade-out",
+      "category": "experience",
+      "onVideoPlaying": "",
+      "onVideoPaused": "",
+      "onVideoEnded": "experience:next energise"
+    },
+    {
+      "id": "energise",
+      "src": "/media/02-energy.mp4",
+      "poster": "/media/posters/02-energy-0.png",
+      "loop": false,
+      "transitionIn": "fade-in",
+      "transitionOut": "fade-out",
+      "category": "experience",
+      "onVideoPlaying": "",
+      "onVideoPaused": "",
+      "onVideoEnded": "experience:next daily_routine"
+    },
+    {
+      "id": "daily_routine",
+      "src": "/media/03-daily-routine.mp4",
+      "poster": "/media/posters/03-daily-routine-0.png",
+      "loop": false,
+      "transitionIn": "fade-in",
+      "transitionOut": "fade-out",
+      "category": "experience",
+      "onVideoPlaying": "",
+      "onVideoPaused": "",
+      "onVideoEnded": "experience:next wind_down"
+    },
+    {
+      "id": "wind_down",
+      "src": "/media/04-wind-down.mp4",
+      "poster": "/media/posters/04-wind-down-0.png",
+      "loop": false,
+      "transitionIn": "fade-in",
+      "transitionOut": "fade-out",
+      "category": "experience",
+      "onVideoPlaying": "",
+      "onVideoPaused": "",
+      "onVideoEnded": "experience:next sleep"
+    },
+    {
+      "id": "sleep",
+      "src": "/media/05-sleep.mp4",
+      "poster": "/media/posters/05-sleep-0.png",
+      "loop": false,
+      "transitionIn": "fade-in",
+      "transitionOut": "fade-out",
+      "category": "experience",
+      "onVideoPlaying": "",
+      "onVideoPaused": "",
+      "onVideoEnded": ""
+    },
+    {
+      "id": "intelligence",
+      "src": "/media/06-intelligence.mp4",
+      "poster": "/media/posters/06-intelligence-0.png",
+      "loop": false,
+      "transitionIn": "fade-in",
+      "transitionOut": "fade-out",
+      "category": "intelligence",
+      "onVideoPlaying": "",
+      "onVideoPaused": "",
+      "onVideoEnded": ""
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+.video-end {
+	background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+
+    transform: translateZ(0);
+    will-change: transform;
+
+    transition: opacity 0.5s ease-in-out;
+
+    &.page--ready {
+        opacity: 1;
+    }
+
+    &.page--show {
+        //opacity: 1;
+    }
+}
+
+.video-end__container {
+	position: absolute;
+	top: 18.3vh;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto auto auto;
+	box-sizing: border-box;
+	text-align: center;
+	width: 45.2vw;
+	height: 53.5vh;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 5.23vw;
+		height: 5.23vw;
+	}
+
+	&:before {
+		content: '';
+		top: 0;
+		right: 0;
+		border-top: 1px solid $white;
+		border-right: 1px solid $white;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		border-bottom: 1px solid $white;
+		border-left: 1px solid $white;
+	}
+}
+
+.video-end__column {
+	position: relative;
+	display: inline-block;
+	height: 40vh;
+	width: 16.7vw;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('/img/video-end/background/more-info.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 0.52vw;
+	margin: 6.7vh 1.8vw;
+
+	filter: drop-shadow(-25px 25px 15px #000000);
+	-webkit-filter: drop-shadow(-25px 25px 15px #000000);
+	-moz-filter: drop-shadow(-25px 25px 15px #000000);
+}
+
+.video-end__icon {
+	display: block;
+	margin: 13.9vh auto 2.08vh;
+
+	&.video-end__icon--more-info {
+		height: 4.86vh;
+		width: 2.1vw;
+		margin-bottom: 2.17vh;
+	}
+
+	&.video-end__icon--replay {
+		height: 4.39vh;
+		width: 2.29vw;
+		margin-top: 0;
+	}
+}
+
+.video-end__title {
+	display: inline-block;
+	color: $white;
+	font-size: 1.85vh;
+	font-weight: 600;
+	letter-spacing: 0.1vw;
+	text-transform: uppercase;
+	margin: 0;
+	padding-bottom: 0.69vh;
+	border-bottom: 0.18vh solid $nature;
+	text-decoration: none;
+}
+
+.video-end__replay {
+	position: absolute;
+	bottom: 5.6vh;
+	right: 3vw;
+	left: 3vw;
+	border-bottom: 0.09vh solid $white;
+	text-decoration: none;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -0.8vh;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: 1.2vh;
+		width: 9.84vw;
+		background-color: $nature;
+		border-radius: 100px;
+	}
+}
+
+.video-end__replay-title {
+	margin: 0 auto 3.93vh;
+	width: 22.9vw;
+	font-size: 2.31vh;
+	font-weight: 600;
+	line-height: 1.1;
+	letter-spacing: 0.32vw;
+	color: $white;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+}
+
+
+
+

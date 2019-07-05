@@ -1,0 +1,201 @@
+/** ====================================================================================================================
+ // Home
+ // ================================================================================================================= */
+
+$home-bg:               '/img/home/home-bg.png';
+$home-splash-top:       21.5vw;
+$home-heading-size:     9.6vh;
+$home-heading-margin:   4vh;
+
+.home {
+
+    &__inner {
+        height: inherit;
+        width: inherit;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        color: inherit;
+        text-decoration: none;
+        opacity: 0;
+
+        transform: translateZ(0);
+        will-change: transform;
+        
+        transition: 1s ease-in-out;
+        cursor: default;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__logo {
+        display: block;
+        position: absolute;
+        width: 10.1vw;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto auto 5.4vh auto;
+    }
+
+    .splash {
+        align-self: center;
+        color: $white;
+        position: relative;
+        text-align: center;
+        top: $home-splash-top;
+
+        &__heading {
+            color: inherit;
+            margin: 0 0 $home-heading-margin 0;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: $home-heading-size; // 80px
+            letter-spacing: 0.125em;
+            line-height: 1em;
+
+            .pre {
+                clear: both;
+                display: block;
+                font-size: 0.4em;
+                font-weight: 600;
+                margin: 0 0 0.4em 0;
+                line-height: 1em;
+            }
+        }
+    }
+
+    .begin {
+        cursor: pointer;
+        display: inline-block;
+
+        &:after {
+            content: ' ';
+            display: table;
+            clear: both;
+        }
+
+        &__inner {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        &__circle-outer {
+            width: 16.8vh;
+            height: 16.8vh;
+            box-sizing: border-box;
+            position: relative;
+            float: left;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+
+            &:before {
+                content: ' ';
+                display: block;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                border-radius: 50%;
+                background: $white;
+                @include animation-radiate-home(3s, 0, infinite);
+                @include set-position-mc();
+            }
+
+            &:after {
+                content: ' ';
+                display: block;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                border-radius: 50%;
+                background: $white;
+                @include animation-radiate-home(3s, 1.5s, infinite);
+                @include set-position-mc();
+            }
+        }
+
+        &__circle-inner {
+            content: ' ';
+            background: $white;
+            display: block;
+            width: 40%;
+            height: 40%;
+            box-sizing: border-box;
+            border-radius: 50%;
+            opacity: 1;
+            @include set-position-mc();
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        &__label {
+            font-weight: 600;
+            float: left;
+            margin: 0;
+            text-transform: uppercase;
+            position: relative;
+            letter-spacing: 0.150em;    // 3px
+            font-size: 2.4vh;           // 20px
+            top: 0.100em;               // 2px
+            left: -0.9em;
+        }
+
+        .icon {
+            background: transparent url('/img/home/tap-to-start.svg') no-repeat center;
+            background-size: 35%;
+            display: block;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            will-change: transform;
+            transition: background 0.5s ease;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            @include set-position-mc();
+        }
+    }
+
+    // on page show
+    &.page--show {
+
+    }
+
+    // on page ready
+    &.page--ready {
+
+        .home__inner {
+           opacity: 1;
+        }
+    }
+
+    // on page blink
+    &.page--blink {
+
+        &:after {
+            content: ' ';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #454545, #000000);
+        }
+    }
+
+    &.pre-init {
+
+        .begin__circle-outer {
+
+            &:before, &:after {
+                opacity: 0;
+            }
+        }
+    }
+}
