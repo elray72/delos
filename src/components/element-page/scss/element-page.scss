@@ -5,23 +5,10 @@
 	height: 100%;
 	overflow: hidden;
 	border-radius: 6px;
-
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-ms-perspective: 1000;
-	perspective: 1000;
-
-	transform: translateZ(0);
-	
+	perspective: 1000px;
 	will-change: transform;
-
 	transform: translate3d(0, 0, 0);
-
 	transition: transform 1s ease-in-out 0.85s,
 				width 1s ease-in-out 0.85s,
 				height 1s ease-in-out 0.85s;
@@ -68,26 +55,14 @@
 	height: 100vh;
 	background: $white;
 	opacity: 0;
-
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-ms-perspective: 1000;
-	perspective: 1000;
+	perspective: 1000px;
 
 	transform: translateZ(0);
-	
 	will-change: transform;
-
 	transform-origin: top left;
-
 	transition: opacity 1s ease-in-out 0.85s,
 				transform 1s ease-in-out 0.85s;
-
 
 	// Resolution: Interactive Screen
 	@media only screen and (width: 1280px) and (height: 720px),
@@ -108,12 +83,10 @@
 		.element-page--purified-water & { transform: translate3d(-238px, -4px, 0.0002px) scale(0.32241); }
 		.element-page--temperature-control & { transform: translate3d(-240px, -20px, 0.0002px) scale(0.36272); }
 		.element-page--performance-mattress & { transform: translate3d(-174px, -3px, 0.0002px) scale(0.32745); }
-
 	}
 
 	// Resolution: 1080p
 	@media (width: 1920px) and (height: 1080px) {
-
 		width: 730px;
 		height: 1080px;
 
@@ -129,8 +102,7 @@
 	}
 
 	// Resolution: 1200p
-    @media (width: 2133px) and (height: 1200px) {
-
+	@media (width: 2133px) and (height: 1200px) {
 		width: 811px;
 		height: 1200px;
 
@@ -172,23 +144,10 @@
 		height: 1px;
 		transform-origin: 0 0;
 		opacity: 0;
-
-		-webkit-backface-visibility: hidden;
-		-moz-backface-visibility: hidden;
-		-ms-backface-visibility: hidden;
 		backface-visibility: hidden;
-
-		-webkit-perspective: 1000;
-		-moz-perspective: 1000;
-		-ms-perspective: 1000;
-		perspective: 1000;
-
-		transform: translateZ(0);
-		
+		perspective: 1000px;
 		will-change: transform;
-
 		transform: scaleY(1);
-
 		transition: opacity 0.8s ease 0s, transform 0s ease 1.9s;
 	}
 }
@@ -198,33 +157,20 @@
 	position: absolute;
 	z-index: 1;
 	width: 62vw;
-
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-ms-perspective: 1000;
-	perspective: 1000;
-
+	perspective: 1000px;
 	transform: translateZ(0);
-	
 	will-change: transform;
-
 	transform-origin: top left;
-
 	transition: transform 1s ease-in-out 0.85s;
-
 
 	// Resolution: Interactive Screen
 	@media only screen and (width: 1280px) and (height: 720px),
-		   only screen and (-webkit-min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
-		   only screen and (min--moz-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
-		   only screen and (-o-min-device-pixel-ratio: 3/1) and (width: 1280px) and (height: 720px),
-		   only screen and (min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
-		   only screen and (min-resolution: 3dppx) and (width: 1280px) and (height: 720px) {
+			only screen and (-webkit-min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			only screen and (min--moz-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			only screen and (-o-min-device-pixel-ratio: 3/1) and (width: 1280px) and (height: 720px),
+			only screen and (min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			only screen and (min-resolution: 3dppx) and (width: 1280px) and (height: 720px) {
 
 		width: 794px;
 
@@ -236,7 +182,6 @@
 		.element-page--purified-water & { transform: translate3d(-81px, -4px, 0.0001px) scale(0.32241); }
 		.element-page--temperature-control & { transform: translate3d(-64px, -20px, 0.0001px) scale(0.36272); }
 		.element-page--performance-mattress & { transform: translate3d(-15px, -3px, 0.0001px) scale(0.32745); }
-
 	}
 
 	// Resolution: 1080p
@@ -292,21 +237,10 @@
 	width: 100%;
 	float: left;
 	opacity: 0.5;
-
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-ms-perspective: 1000;
-	perspective: 1000;
-
+	perspective: 1000px;
 	transform: translateZ(0);
-	
 	will-change: transform;
-
 	transition: opacity 1s ease-in-out 0.85s;
 }
 
@@ -354,24 +288,11 @@
 	line-height: 0;
 	text-indent: -99999px;
 	opacity: 0;
-	border: 0px;
-
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
+	border: 0;
 	backface-visibility: hidden;
-
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-ms-perspective: 1000;
-	perspective: 1000;
-
-	transform: translateZ(0);
-	
+	perspective: 1000px;
 	will-change: transform;
-
 	transform: translate3d(5000px, 0, 0.0003px);
-
 	transition: opacity 0.8s ease 0s,
 				transform 0s ease 0.85s;
 }
@@ -394,23 +315,10 @@
 	margin: 0;
 	padding: 0 0 2.4vh 1.8vw;
 	opacity: 0;
-
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-ms-perspective: 1000;
-	perspective: 1000;
-
-	transform: translateZ(0);
-	
+	perspective: 1000px;
 	will-change: transform;
-
 	transform: translate3d(-100px, 0, 0);
-
 	transition: opacity 0.8s ease 0s, transform 0s ease 1.8s;
 }
 
@@ -423,21 +331,9 @@
 	margin: 0;
 	padding: 0 0 3.8vh 1.8vw;
 	opacity: 0;
-
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-ms-perspective: 1000;
-	perspective: 1000;
-
-	transform: translateZ(0);
-	
+	perspective: 1000px;
 	will-change: transform;
-
 	transform: translate3d(-100px, 0, 0);
 
 	transition: opacity 0.8s ease 0s, transform 0s ease 1.8s;
@@ -460,23 +356,10 @@
 	padding: 0 0 2vh 0;
 	opacity: 0;
 	max-width: 28vw;
-
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-ms-perspective: 1000;
-	perspective: 1000;
-
-	transform: translateZ(0);
-	
+	perspective: 1000px;
 	will-change: transform;
-
 	transform: translate3d(-100px, 0, 0);
-
 	transition: opacity 0.8s ease 0s, transform 0s ease 1.8s;
 
 	&:before {
@@ -493,16 +376,8 @@
 .element-page__product-icon {
 	position: absolute;
 	opacity: 0;
-
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-ms-perspective: 1000;
-	perspective: 1000;
+	perspective: 1000px;
 
 	transform: translateZ(0);
 	
@@ -526,23 +401,10 @@
 	position: absolute;
 	bottom: 0;
 	opacity: 0;
-
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-ms-perspective: 1000;
-	perspective: 1000;
-
-	transform: translateZ(0);
-	
+	perspective: 1000px;
 	will-change: transform;
-
 	transform: translate3d(-100px, 0, 0);
-	
 	transition: opacity 0.8s ease 0s, transform 0s ease 1.8s;
 
 	.element-page--biophilic-sounds & { left: 29.4vw; width: 14.5vw; }
@@ -564,7 +426,7 @@
 
 	.element-page {
 		z-index: 200;
-		border-radius: 0px;
+		border-radius: 0;
 
 		transition: transform 1s ease-in-out,
 					width 1s ease-in-out,

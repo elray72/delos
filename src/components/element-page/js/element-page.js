@@ -56,7 +56,7 @@
 					nav_more_info: false,
 					nav_menu: false
 				}
-			}
+			};
 
 			window.globalNavigation.setNavigationVisibility(menuControls.visibility);
 

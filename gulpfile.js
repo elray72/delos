@@ -155,8 +155,8 @@ gulp.task('media', function () {
         plugins.del.sync([target + '/media/*.json']);
     }
 
-    let media = gulp.src(['./dist/media/**/*'])
-        .pipe(gulp.dest(target + '/media'));
+    let media = gulp.src([`${DIST_FOLDER}/media/**/*`])
+        .pipe(gulp.dest(BUILD_FOLDER + '/media'));
 
     let components = gulp.src(['./src/components/**/media/*'])
         .pipe(plugins.flatten({ includeParents: 1} ))

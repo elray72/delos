@@ -39,7 +39,7 @@
         /**
          * Run.
          *
-         * Applies settings to Global Navigaton, initalises the Elements Menu page, injects it from the
+         * Applies settings to Global Navigation, initialises the Elements Menu page, injects it from the
          * template into the DOM.
          */
         run: function () {

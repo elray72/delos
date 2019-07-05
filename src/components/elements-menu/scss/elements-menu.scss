@@ -16,20 +16,10 @@
 
 	opacity: 0;
 
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-ms-perspective: 1000;
-	perspective: 1000;
-
+	perspective: 1000px;
 	transform: translateZ(0);
-	
 	will-change: transform;
-
 	transition: opacity 0.5s ease;
 
 	&.active {
@@ -48,8 +38,8 @@
 
 .elements-menu__nav {
 	float: left;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 
 	filter: drop-shadow(-50px 40px 25px rgba(0,0,0,0.8));
 	-webkit-filter: drop-shadow(-50px 40px 25px rgba(0,0,0,0.8));
@@ -58,8 +48,8 @@
 
 .elements-menu__list {
 	float: left;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
@@ -73,35 +63,20 @@
 	margin-bottom: 0.6vw;
 	float: left;
 	border-radius: 0.41vw;
-
 	opacity: 0;
-
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-ms-perspective: 1000;
-	perspective: 1000;
-
-	transform: translateZ(0);
-	
+	perspective: 1000px;
 	will-change: transform;
-   
 	transform: translateY(2vh);
 
 	// Resolution: Interactive Screen
 	@media only screen and (width: 1280px) and (height: 720px),
-		   only screen and (-webkit-min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
-		   only screen and (min--moz-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
-		   only screen and (-o-min-device-pixel-ratio: 3/1) and (width: 1280px) and (height: 720px),
-		   only screen and (min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
-		   only screen and (min-resolution: 3dppx) and (width: 1280px) and (height: 720px) {
-
+			only screen and (-webkit-min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			only screen and (min--moz-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			only screen and (-o-min-device-pixel-ratio: 3/1) and (width: 1280px) and (height: 720px),
+			only screen and (min-device-pixel-ratio: 3) and (width: 1280px) and (height: 720px),
+			only screen and (min-resolution: 3dppx) and (width: 1280px) and (height: 720px) {
 		transform: translateY(14px);
-
 	}
 
 	// Resolution: 1080p
@@ -113,16 +88,12 @@
 
 	// Resolution: 1200p
 	@media (width: 2133px) and (height: 1200px) {
-
 		transform: translateY(23px);
-
 	}
 
 	// Resolution: 4K
 	@media (width: 3840px) and (height: 2160px) {
-
 		transform: translateY(43px);
-		
 	}
 
 	&.open {
@@ -130,7 +101,6 @@
 		.elements-menu__icon {
 			opacity: 0;
 			z-index: 201;
-
 			transition: opacity 0.2s ease 0s;
 		}
 	}
@@ -170,8 +140,6 @@
 
 .elements-menu__element--circadian-lighting {
 	transition: opacity 0.4s ease 0.6s, transform 0.6s ease-out 0.6s;
-	
-
 	.elements-menu__icon {
 		width: 1.407vw;
 		height: 3.335vh;

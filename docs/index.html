@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <title>Darwin by Delos.</title>
+    <link rel="stylesheet" href="/css/style.css?cache=5kt6k4blqq">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#000000">
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+    <link rel="preload" as="video" href="/media/00-home.mp4">
+<link rel="preload" as="video" href="/media/00-intro-short.mp4">
+<link rel="preload" as="video" href="/media/00-menu-in.mp4">
+<link rel="preload" as="video" href="/media/00-menu-loop.mp4">
+
+<link rel="preload" as="video" href="/media/elements/purified-air.mp4">
+<link rel="preload" as="video" href="/media/elements/purified-water.mp4">
+<link rel="preload" as="video" href="/media/elements/circadian-lighting.mp4">
+    <!-- Posters -->
+<link rel="preload" as="image" href="/media/posters/00-black.png">
+<link rel="preload" as="image" href="/media/posters/00-home-0.png">
+<link rel="preload" as="image" href="/media/posters/00-menu-0.png">
+<link rel="preload" as="image" href="/media/posters/01-wake-up-0.png">
+<link rel="preload" as="image" href="/media/posters/02-energy-0.png">
+<link rel="preload" as="image" href="/media/posters/03-daily-routine-0.png">
+<link rel="preload" as="image" href="/media/posters/04-wind-down-0.png">
+<link rel="preload" as="image" href="/media/posters/05-sleep-0.png">
+<link rel="preload" as="image" href="/media/posters/06-intelligence-0.png">
+
+<!-- Element Page -->
+<link rel="preload" as="image" href="/img/element-page/backgrounds/automated-blackout-blinds.jpg">
+<link rel="preload" as="image" href="/img/element-page/backgrounds/biophilic-sounds.jpg">
+<link rel="preload" as="image" href="/img/element-page/backgrounds/circadian-lighting.jpg">
+<link rel="preload" as="image" href="/img/element-page/backgrounds/energising-mirror.jpg">
+<link rel="preload" as="image" href="/img/element-page/backgrounds/performance-mattress.jpg">
+<link rel="preload" as="image" href="/img/element-page/backgrounds/purified-air.jpg">
+<link rel="preload" as="image" href="/img/element-page/backgrounds/temperature-control.jpg">
+<link rel="preload" as="image" href="/img/element-page/products/automated-blackout-blinds.png">
+<link rel="preload" as="image" href="/img/element-page/products/biophilic-sounds.png">
+<link rel="preload" as="image" href="/img/element-page/products/circadian-lighting.png">
+<link rel="preload" as="image" href="/img/element-page/products/energising-mirror.png">
+<link rel="preload" as="image" href="/img/element-page/products/performance-mattress.png">
+<link rel="preload" as="image" href="/img/element-page/products/purified-air.png">
+<link rel="preload" as="image" href="/img/element-page/products/temperature-control.png">
+
+<!-- Element Posters -->
+
+<!-- More Info -->
+<link rel="preload" as="image" href="/img/more-info/backgrounds/background.jpg">
+<link rel="preload" as="image" href="/img/more-info/backgrounds/content-background.png">
+
+<!-- Video End -->
+<link rel="preload" as="image" href="/img/more-info/backgrounds/background.jpg">
+<link rel="preload" as="image" href="/img/more-info/backgrounds/content-background.png">
+</head>
+
+<body data-component="debug" oncontextmenu="return false">
+<div class="main">
+    <div class="main__inner">
+        <!-- Global Navigation -->
+<nav class="global-navigation" id="global_navigation">
+
+	<!-- Left Nav (Back & Title) -->
+	<ul class="global-navigation__nav global-navigation__nav--left">
+		<li class="global-navigation__nav-item">
+			<button class="global-navigation__back-button" id="nav_back"></button>
+		</li>
+		<li class="global-navigation__nav-item">
+			<h1 class="global-navigation__page-title" id="nav_title">Experience Darwin</h1>
+		</li>
+	</ul>
+
+	<!-- Right Nav (Darwin Intelligence, More info & Main menu) -->
+	<ul class="global-navigation__nav global-navigation__nav--right">
+		<li class="global-navigation__nav-item">
+			<button class="global-navigation__nav-button" id="nav_intelligence">
+				Darwin Intelligence
+			</button>
+		</li>
+		<li class="global-navigation__nav-item">
+			<button class="global-navigation__nav-button global-navigation__nav-button--more-info" id="nav_more_info">
+				More Info
+			</button>
+		</li>
+        <li class="global-navigation__nav-item global-navigation__nav-item--video" id="nav_menu_video">
+            <button class="global-navigation__menu-icon global-navigation__menu-icon--play">
+                <span>Play</span>
+            </button>
+            <button class="global-navigation__menu-icon global-navigation__menu-icon--pause">
+                <span>Pause</span>
+            </button>
+        </li>
+		<li class="global-navigation__nav-item">
+			<button class="global-navigation__menu-icon" id="nav_menu"></button>
+		</li>
+	</ul>
+
+</nav>
+        <template id="elements_menu_template" data-component="elements-menu">
+	<div class="elements-menu" id="elements_menu">
+		<nav class="elements-menu__nav">
+			<ul class="elements-menu__list">
+				<li class="elements-menu__element elements-menu__element--purified-air" data-element="air">
+					<h2 class="elements-menu__title">purified<br />air</h2>
+					<span class="elements-menu__icon"></span>
+					
+<article class="element-page element-page--purified-air" id="purified_air">
+
+	<div class="element-page__content">
+		<div class="element-page__content-positioner">
+			<h1 class="element-page__title">PURIFIED AIR</h1>
+			<p class="element-page__lead">
+				Indoor air quality can be up to five times worse than the outdoors.
+				<br />
+				<br />
+				The DARWIN Air Purification System monitors air quality in real-time and signals the heating and cooling system to increase ventilation exactly when you need it.
+			</p>
+			<ul class="element-page__list">
+				<li class="element-page__list-item">REDUCES POLLEN AND OTHER ALLERGENS</li>
+				<li class="element-page__list-item">REMOVES TOXINS AND PATHOGENS</li>
+				<li class="element-page__list-item">EXPELS ODOURS</li>
+				<li class="element-page__list-item">REAL-TIME RESPONSE PURIFICATION</li>
+			</ul>
+		</div>
+		<div id="lottie_air" class="element-page__product-icon"></div>
+		<!--<img src="/img/element-page/products/purified-air.png" alt="" class="element-page__product-image" />-->
+	</div>
+
+	<div class="element-page__background-image-container">
+		<img class="element-page__background-image" src="/img/element-page/backgrounds/purified-air.jpg" alt="Purified Air" />
+		<div class="element-page__background-video" id="purified_air_video" data-src="/media/elements/purified-air.mp4"></div>
+	</div>
+	<button class="element-page__close" data-close-element="purified-air">Close</button>
+
+</article>
+
+				</li>
+				<li class="elements-menu__element elements-menu__element--purified-water" data-element="water">
+					<h2 class="elements-menu__title">purified<br />water</h2>
+					<span class="elements-menu__icon"></span>
+					
+<article class="element-page element-page--purified-water" id="purified_water">
+
+	<div class="element-page__content">
+		<div class="element-page__content-positioner">
+			<h1 class="element-page__title">PURIFIED WATER</h1>
+			<p class="element-page__lead">
+				While Australians enjoy some of the cleanest water in the world, microscopic contaminants like lead, and additives can still be present, affecting the taste, odour and ‘hardness’ of your water.
+				<br />
+				<br />
+				The DARWIN Water Filtration System uses the best in-class technologies to help filter out microscopic contaminants and additives throughout your home.
+			</p>
+			<ul class="element-page__list">
+				<li class="element-page__list-item">Great Tasting Water</li>
+				<li class="element-page__list-item">Softer Skin and Hair</li>
+				<li class="element-page__list-item">Savings For You and the Planet</li>
+				<li class="element-page__list-item">Appliance Protection</li>
+			</ul>
+		</div>
+		<div id="lottie_water" class="element-page__product-icon"></div>
+		<!--<img src="/img/element-page/products/purified-water.png" alt="" class="element-page__product-image" />-->
+	</div>
+
+	<div class="element-page__background-image-container">
+		<img class="element-page__background-image" src="/img/element-page/backgrounds/purified-water.jpg" alt="Purified Water" />
+		<div class="element-page__background-video" id="purified_water_video" data-src="/media/elements/purified-water.mp4"></div>
+	</div>
+	<button class="element-page__close" data-close-element="purified-water">Close</button>
+
+</article>
+
+				</li>
+				<li class="elements-menu__element elements-menu__element--circadian-lighting" data-element="light">
+					<h2 class="elements-menu__title">circadian<br />lighting</h2>
+					<span class="elements-menu__icon"></span>
+					
+<article class="element-page element-page--circadian-lighting" id="circadian_lighting">
+
+	<div class="element-page__content">
+		<div class="element-page__content-positioner">
+			<h1 class="element-page__title">Circadian Lighting</h1>
+			<p class="element-page__lead">
+				Exposure to light patterns helps regulate your body’s circadian rhythm - a biological process that works on a 24-hour cycle and determines your natural sleep-wake cycle.
+				<br />
+				<br />
+				The DARWIN Circadian Lighting System constantly regulates and adjusts the lighting in your home. Creating a more natural lighting pattern allows your body to sync naturally to different times of the day. This can positively affect your comfort, mood and alertness throughout the day and into the evening.
+			</p>
+			<ul class="element-page__list">
+				<li class="element-page__list-item">WELLNESS EXPERIENCES TO MATCH YOUR DAILY ROUTINE</li>
+				<li class="element-page__list-item">DAWN SIMULATION</li>
+				<li class="element-page__list-item">MIMIC NATURAL LIGHT PATTERNS</li>
+			</ul>
+		</div>
+		<div id="lottie_light" class="element-page__product-icon"></div>
+		<!--<img src="/img/element-page/products/circadian-lighting.png" alt="" class="element-page__product-image" />-->
+	</div>
+
+	<div class="element-page__background-image-container">
+		<img class="element-page__background-image" src="/img/element-page/backgrounds/circadian-lighting.jpg" alt="Circadian Lighting" />
+        <div class="element-page__background-video" id="circadian_lighting_video" data-src="/media/elements/circadian-lighting.mp4"></div>
+	</div>
+	<button class="element-page__close" data-close-element="circadian-lighting">Close</button>
+
+</article>
+
+				</li>
+				<li class="elements-menu__element elements-menu__element--blackout-blinds" data-element="blinds">
+					<h2 class="elements-menu__title">automated<br />blackout blinds</h2>
+					<span class="elements-menu__icon"></span>
+					
+<article class="element-page element-page--blackout-blinds" id="blackout_blinds">
+
+	<div class="element-page__content">
+		<div class="element-page__content-positioner">
+			<h1 class="element-page__title">AUTOMATED BLACKOUT BLINDS</h1>
+			<p class="element-page__lead">
+				Exposure to light at night during sleep time, even in minute quantities, can have dramatic impacts on the circadian rhythm.
+				<br />
+				<br />
+				DARWIN’s automated blackout blinds work to eliminate exterior light pollution at night and helps create an environment, which supports better natural sleep and awakening.
+			</p>
+			<ul class="element-page__list">
+				<li class="element-page__list-item">AUTOMATED SHADES</li>
+				<li class="element-page__list-item">ELIMINATE EXTERIOR LIGHT POLLUTION</li>
+				<li class="element-page__list-item">BETTER SLEEP/WAKE TRANSITION</li>
+				<li class="element-page__list-item">CIRCADIAN RHYTHM</li>
+			</ul>
+		</div>
+		<div id="lottie_blinds" class="element-page__product-icon"></div>
+		<img src="/img/element-page/products/automated-blackout-blinds.png" alt="" class="element-page__product-image" />
+	</div>
+
+	<div class="element-page__background-image-container">
+		<img class="element-page__background-image" src="/img/element-page/backgrounds/automated-blackout-blinds.jpg" alt="Automated Blackout Blinds" />
+        <div class="element-page__background-video" id="blackout_blinds_video" data-src="/media/elements/automated-blackout-blinds.mp4"></div>
+	</div>
+	<button class="element-page__close" data-close-element="blackout-blinds">Close</button>
+
+</article>
+
+				</li>
+				<li class="elements-menu__element elements-menu__element--ambient-sound" data-element="sound">
+					<h2 class="elements-menu__title">biophilic<br />sounds</h2>
+					<span class="elements-menu__icon"></span>
+					
+<article class="element-page element-page--biophilic-sounds" id="biophilic_sounds">
+
+	<div class="element-page__content">
+		<div class="element-page__content-positioner">
+			<h1 class="element-page__title">Biophilic Sounds</h1>
+			<p class="element-page__lead">
+				Waking up to the buzzing sounds of an alarm is a disruptive and often unpleasant experience. 
+				<br />
+				<br />
+				With DARWIN, waking is gentle and positive as you’re immersed in the sounds of nature.
+			</p>
+			<ul class="element-page__list">
+				<li class="element-page__list-item">WAKE GRADUALLY</li>
+				<li class="element-page__list-item">FEEL POSITIVE AND READY FOR THE DAY AHEAD</li>
+			</ul>
+		</div>
+		<div id="lottie_sound" class="element-page__product-icon"></div>
+		<img src="/img/element-page/products/biophilic-sounds.png" alt="" class="element-page__product-image" />
+	</div>
+
+	<div class="element-page__background-image-container">
+		<img class="element-page__background-image" src="/img/element-page/backgrounds/biophilic-sounds.jpg" alt="Biophilic Sounds" />
+        <div class="element-page__background-video" id="biophilic_sounds_video" data-src="/media/elements/biophilic-sounds.mp4"></div>
+	</div>
+	<button class="element-page__close" data-close-element="biophilic-sounds">Close</button>
+
+</article>
+				</li>
+				<li class="elements-menu__element elements-menu__element--thermal-comfort" data-element="temperature">
+					<h2 class="elements-menu__title">temperature<br />control</h2>
+					<span class="elements-menu__icon"></span>
+					
+<article class="element-page element-page--temperature-control" id="temperature_controlx=">
+
+	<div class="element-page__content">
+		<div class="element-page__content-positioner">
+			<h1 class="element-page__title">Temperature Control</h1>
+			<p class="element-page__lead">
+				Temperature is one of the key environmental factors contributing to your ability to fall asleep at night, as well as your ability to to achieve restful sleep. 
+				<br />
+				<br />
+				At night, DARWIN gradually lowers the temperature to help you prepare for sleep and slowly warms the home as you jump start your day.
+			</p>
+			<ul class="element-page__list">
+				<li class="element-page__list-item">Thermal Comfort Control</li>
+				<li class="element-page__list-item">Sleep Schedules</li>
+			</ul>
+		</div>
+		<div id="lottie_temperature" class="element-page__product-icon"></div>
+		<img src="/img/element-page/products/temperature-control.png" alt="" class="element-page__product-image" />
+	</div>
+
+	<div class="element-page__background-image-container">
+		<img class="element-page__background-image" src="/img/element-page/backgrounds/temperature-control.jpg" alt="Temperature Control" />
+        <div class="element-page__background-video" id="temperature_control_video" data-src="/media/elements/temperature-control.mp4"></div>
+    </div>
+
+	<button class="element-page__close" data-close-element="temperature-control">Close</button>
+
+</article>
+
+				</li>
+				<li class="elements-menu__element elements-menu__element--energising-mirror" data-element="mirror">
+					<h2 class="elements-menu__title">energising<br />mirror</h2>
+					<span class="elements-menu__icon"></span>
+					
+<article class="element-page element-page--energising-mirror" id="energising_mirror">
+
+	<div class="element-page__content">
+		<div class="element-page__content-positioner">
+			<h1 class="element-page__title">Energising Mirror</h1>
+			<p class="element-page__lead">
+				Bright light has a powerful effect on the body’s circadian rhythm.
+				<br />
+				<br />
+				The DARWIN Energising Mirror provides a bright white light, which helps stimulate your mind and your body so you feel positive and energised as you prepare for your day.
+			</p>
+			<ul class="element-page__list">
+				<li class="element-page__list-item">ENERGY BOOST WHEN YOU NEED IT MOST</li>
+				<li class="element-page__list-item">WAKE REFRESHED AND READY TO TAKE ON THE DAY</li>
+			</ul>
+		</div>
+		<div id="lottie_mirror" class="element-page__product-icon"></div>
+		<img src="/img/element-page/products/energising-mirror.png" alt="" class="element-page__product-image" />
+	</div>
+
+	<div class="element-page__background-image-container">
+		<img class="element-page__background-image" src="/img/element-page/backgrounds/energising-mirror.jpg" alt="Energising Mirror" />
+        <div class="element-page__background-video" id="energising_mirror_video" data-src="/media/elements/energising-mirror.mp4"></div>
+	</div>
+	<button class="element-page__close" data-close-element="energising-mirror">Close</button>
+
+</article>
+
+				</li>
+				<li class="elements-menu__element elements-menu__element--wellness-mattress" data-element="mattress">
+					<h2 class="elements-menu__title">performance<br />mattress</h2>
+					<span class="elements-menu__icon"></span>
+					
+<article class="element-page element-page--performance-mattress" id="performance_mattress">
+
+	<div class="element-page__content">
+		<div class="element-page__content-positioner">
+			<h1 class="element-page__title">PERFORMANCE MATTRESS</h1>
+			<p class="element-page__lead">
+				With over 25% of Australian adults experiencing sleep disturbances related to physical pain and general discomfort, your mattress and bedding can profoundly impact your sleep.
+				<br />
+				<br />
+				The DARWIN Performance Mattress contains heat dissipating natural memory foam to provide pressure relief, contouring support and luxurious comfort throughout the night.
+			</p>
+			<ul class="element-page__list">
+				<li class="element-page__list-item">DEEP PRESSURE RELIEF</li>
+				<li class="element-page__list-item">SLEEPS COOL</li>
+				<li class="element-page__list-item">ALLERGY FRIENDLY</li>
+				<li class="element-page__list-item">NEGLIGIBLE VOCS</li>
+				<li class="element-page__list-item">BIODEGRADABLE</li>
+			</ul>
+		</div>
+		<div id="lottie_mattress" class="element-page__product-icon"></div>
+		<img src="/img/element-page/products/performance-mattress.png" alt="" class="element-page__product-image" />
+	</div>
+
+	<div class="element-page__background-image-container">
+		<img class="element-page__background-image" src="/img/element-page/backgrounds/performance-mattress.jpg" alt="Performance Mattress" />
+        <div class="element-page__background-video" id="performance_mattress_video" data-src="/media/elements/performance-mattress.mp4"></div>
+	</div>
+	<button class="element-page__close" data-close-element="performance-mattress">Close</button>
+
+</article>
+
+				</li>
+			</ul>
+		</nav>
+	</div>
+</template>
+        <section class="video-bg">
+    <div class="video-player" id="video_player" data-component="video-player">
+    <video src="/media/00-home.mp4" poster="/media/posters/00-home-start.png" data-video-id="home" preload muted loop autoplay></video>
+</div>
+</section>
+        <section id="home" class="home page pre-init" data-component="home">
+    <a href="#experience" class="home__inner">
+        <div class="splash">
+            <h1 class="splash__heading">
+                <span class="pre">Your home</span>
+                <span class="font--300">e</span>
+                <span class="font--400">v</span>
+                <span class="font--500">o</span>
+                <span class="font--600">l</span>
+                <span class="font--700">v</span>
+                <span class="font--800">e</span>
+                <span class="font--900">d</span>
+            </h1>
+            <div class="begin">
+                <div class="begin__inner">
+                    <div class="begin__circle-outer">
+                        <div class="begin__circle-inner">
+                            <i class="icon icon--tap-to-start"></i>
+                        </div>
+                    </div>
+                    <h2 class="begin__label">Touch to begin</h2>
+                </div>
+            </div>
+        </div>
+        <img src="/img/common/logo/darwin-logo.svg" alt="DARWIN HOME WELLNESS INTELLIGENCE" class="home__logo">
+    </a>
+</section>
+        
+<section id="experience" class="experience page" data-component="experience">
+    <div class="experience__inner">
+        <canvas class="experience-wave" id="experience_wave" height="810" width="1920"></canvas>
+        <nav class="experience-menu pre-init" id="experience_menu">
+            <ul class="experience-menu__list">
+                
+                <li class="experience-menu__item lo">
+                    <a class="experience-button" href="#wake" id="menu_item_wake" data-video-id="wake">
+                        <div class="experience-button__inner">
+                            <i class="icon icon--wake"></i>
+                            <h1 class="experience-button__label">Wake</h1>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="experience-menu__item md">
+                    <a class="experience-button" href="#energise" id="menu_item_energise" data-video-id="energise">
+                        <div class="experience-button__inner">
+                            <i class="icon icon--energise"></i>
+                            <h1 class="experience-button__label">Energise</h1>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="experience-menu__item hi">
+                    <a class="experience-button" href="#daily_routine" id="menu_item_daily_routine" data-video-id="daily_routine">
+                        <div class="experience-button__inner">
+                            <i class="icon icon--daily-routine"></i>
+                            <h1 class="experience-button__label">Daily routine</h1>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="experience-menu__item md">
+                    <a class="experience-button" href="#wind_down" id="menu_item_wind_down" data-video-id="wind_down">
+                        <div class="experience-button__inner">
+                            <i class="icon icon--wind-down"></i>
+                            <h1 class="experience-button__label">Wind down</h1>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="experience-menu__item lo">
+                    <a class="experience-button" href="#sleep" id="menu_item_sleep" data-video-id="sleep">
+                        <div class="experience-button__inner">
+                            <i class="icon icon--sleep"></i>
+                            <h1 class="experience-button__label">Sleep</h1>
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+            <div class="experience-slider pre-init" id="experience_slider">
+                <span class="experience-slider__bar" id="experience_slider_bar"></span>
+            </div>
+        </nav>
+
+    </div>
+</section>
+        <section id="intelligence" class="intelligence page" data-component="intelligence">
+    
+</section>
+        <template id="more_info_template" data-component="more-info">
+	<article id="more_info" class="page more-info">
+		<div class="more-info__container">
+			
+			<div class="more-info__content">
+				<p class="more-info__lead">
+					To download a DARWIN home wellness information pack visit:
+				</p>
+
+				<ul class="more-info__list">
+					<li class="more-info__list-item"><span class="more-info__icon--globe"></span>delos.com.au/infopack</li>
+					<li class="more-info__list-item more-info__list-item--small">or</li>
+					<li class="more-info__list-item"><span class="more-info__icon--camera"></span>scan QR Code below:</li>
+				</ul>
+
+				<div class="more-info__qr-code-container">
+					<img src="/img/more-info/content/qr-code.svg" alt="QR Code" class="more-info__qr-code" />
+				</div>
+
+				<p class="more-info__small">
+					<strong>iPhone users:</strong> scan this QR Code with your mobile phone camera
+					<br />
+					<strong>Android phone users:</strong> scan this QR Code with a QR Code reading app
+				</p>
+			</div>
+
+		</div>
+        <button class="global-navigation__menu-icon visible" id="more_info_menu"></button>
+		<button class="more-info__close" id="more_info_close">Close</button>
+		<img src="/img/more-info/content/logo.svg" alt="DARWIN HOME WELLNESS INTELLIGENCE" class="more-info__logo" />
+	</article>
+</template>
+        <section id="video_end" class="video-end page" data-component="video-end">
+	<div class="video-end__container">
+
+		<a href="#" class="video-end__column" id="video_end_page">
+			<img src="" alt="" class="video-end__icon video-end__icon--page" id="video_end_page_icon" />
+			<h2 class="video-end__title" id="video_end_page_title"></h2>
+		</a>
+		<a href="#" class="video-end__column" id="video_end_more_info">
+			<img src="/img/video-end/icons/more-info.svg" alt="More Info" class="video-end__icon video-end__icon--more-info" />
+			<h2 class="video-end__title">More Info</h2>
+		</a>
+
+	</div>
+
+	<a href="#" class="video-end__replay" id="video_end_replay">
+		<img src="/img/video-end/icons/replay.svg" alt="Replay" class="video-end__icon video-end__icon--replay" />
+		<h2 class="video-end__replay-title" id="video_end_replay_title"></h2>
+	</a>
+</section>
+        <template id="timeout_template">
+	<section id="timeout" class="timeout page">
+		<div class="timeout-container">
+
+			<div class="timeout__circle-container">
+				<svg xmlns="http://www.w3.org/2000/svg" class="timeout__countdown-circle">
+					<circle class="countdown__circle-underlay" stroke-width="0.67vw" fill="none" r="10vw" cy="50%" cx="50%"></circle>
+			    	<circle id="countdown_circle" stroke-width="0.67vw" fill="none" r="10vw" cy="50%" cx="50%"></circle>
+			    </svg>
+
+			    <div class="timeout__countdown-number-container">
+		    		<span class="timeout__countdown-number" id="countdown_number">60</span>
+		    		<span class="timeout__countdown-word">seconds</span>
+			    </div>
+		    </div>
+
+		    <div class="timeout__button-container">
+		    	<button class="timeout__button" id="timeout_startover">Startover</button>
+		    	<button class="timeout__button timeout__button--nature" id="timeout_continue">Continue</button>
+		    </div>
+
+		</div>
+	</section>
+</template>
+    </div>
+</div>
+<script src="/js/app.js?cache=5kt6k4blqq"></script>
+
+</body>
+</html>
